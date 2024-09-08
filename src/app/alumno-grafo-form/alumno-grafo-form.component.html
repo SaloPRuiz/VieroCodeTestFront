@@ -1,1 +1,33 @@
-<p>alumno-grafo-form works!</p>
+<h2 mat-dialog-title>{{ isEdit ? 'Editar' : 'Agregar' }} AlumnoGrado</h2>
+
+<mat-dialog-content>
+  <form [formGroup]="alumnoGradoForm" (ngSubmit)="onSubmit()">
+    <mat-form-field appearance="fill">
+      <mat-label>Alumno</mat-label>
+      <mat-select formControlName="alumnoId">
+        <mat-option *ngFor="let alumno of alumnos" [value]="alumno.id">
+          {{ alumno.nombre }} {{ alumno.apellidos }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Grado</mat-label>
+      <mat-select formControlName="gradoId">
+        <mat-option *ngFor="let grado of grados" [value]="grado.id">
+          {{ grado.nombre }}
+        </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill">
+      <mat-label>Sección</mat-label>
+      <input matInput formControlName="seccion" />
+    </mat-form-field>
+
+    <div mat-dialog-actions>
+      <button mat-button (click)="onCancel()">Cancelar</button>
+      <button mat-button color="primary" type="submit">Guardar</button>
+    </div>
+  </form>
+</mat-dialog-content>

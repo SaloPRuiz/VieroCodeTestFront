@@ -1,1 +1,32 @@
-<p>alumno-grado works!</p>
+<div class="contenedor-tabla">
+  <button (click)="agregarAlumnoGrado()" class="btn-agregar">Agregar</button>
+
+  <table class="tabla-alumnos">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>AlumnoId</th>
+      <th>Alumno</th>
+      <th>GradoId</th>
+      <th>Grado</th>
+      <th>Seccion</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of alumnoGrados">
+      <td>{{ item.id }}</td>
+      <td>{{ item.alumnoId }}</td>
+      <td>{{ item.alumnoNombres }}</td>
+      <td>{{ item.gradoId }}</td>
+      <td>{{ item.gradoNombre }}</td>
+      <td>{{ item.seccion }}</td>
+      <td>
+        <!-- Botones de editar y eliminar -->
+        <button class="btn-editar" (click)="editarAlumnoGrado(item)">Editar</button>
+        <button class="btn-eliminar" (click)="eliminarAlumnoGrado(item.id)">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
