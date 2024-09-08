@@ -14,9 +14,10 @@ import {MatOption, MatSelect} from "@angular/material/select";
 import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
 import {MatButton} from "@angular/material/button";
 import {Alumno} from "../models/alumno";
+import {Profesor} from "../models/profesor";
 
 @Component({
-  selector: 'app-alumno-form',
+  selector: 'app-profesor-form',
   standalone: true,
   imports: [
     MatDialogTitle,
@@ -34,36 +35,35 @@ import {Alumno} from "../models/alumno";
     MatDialogActions,
     MatButton
   ],
-  templateUrl: './alumno-form.component.html',
-  styleUrl: './alumno-form.component.css'
+  templateUrl: './profesor-form.component.html',
+  styleUrl: './profesor-form.component.css'
 })
-export class AlumnoFormComponent implements OnInit {
-  alumnoForm: FormGroup;
+export class ProfesorFormComponent implements OnInit {
+  profesorForm: FormGroup;
   isEdit: boolean = false;
 
   constructor(
     private fb: FormBuilder,
-    public dialogRef: MatDialogRef<AlumnoFormComponent>,
-    @Inject(MAT_DIALOG_DATA) public data: { alumno: Alumno }
+    public dialogRef: MatDialogRef<ProfesorFormComponent>,
+    @Inject(MAT_DIALOG_DATA) public data: { profesor: Profesor }
   ) {
-    this.alumnoForm = this.fb.group({
+    this.profesorForm = this.fb.group({
       nombre: ['', Validators.required],
       apellidos: ['', Validators.required],
-      genero: ['Masculino', Validators.required],
-      fechaNacimiento: ['', Validators.required]
+      genero: ['Masculino', Validators.required]
     });
   }
 
   ngOnInit(): void {
-    if (this.data && this.data.alumno) {
+    if (this.data && this.data.profesor) {
       this.isEdit = true;
-      this.alumnoForm.patchValue(this.data.alumno);
+      this.profesorForm.patchValue(this.data.profesor);
     }
   }
 
   onSubmit(): void {
-    if (this.alumnoForm.valid) {
-      this.dialogRef.close(this.alumnoForm.value);
+    if (this.profesorForm.valid) {
+      this.dialogRef.close(this.profesorForm.value);
     }
   }
 

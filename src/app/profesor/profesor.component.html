@@ -1,0 +1,29 @@
+<div class="contenedor-tabla">
+  <!-- Botón para agregar nuevo alumno -->
+  <button (click)="agregarProfesor()" class="btn-agregar">Agregar</button>
+
+  <table class="tabla-alumnos">
+    <thead>
+    <tr>
+      <th>ID</th>
+      <th>Nombre</th>
+      <th>Apellidos</th>
+      <th>Género</th>
+      <th>Acciones</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let item of profesores">
+      <td>{{ item.id }}</td>
+      <td>{{ item.nombre }}</td>
+      <td>{{ item.apellidos }}</td>
+      <td>{{ item.genero }}</td>
+      <td>
+        <!-- Botones de editar y eliminar -->
+        <button class="btn-editar" (click)="editarProfesor(item)">Editar</button>
+        <button class="btn-eliminar" (click)="eliminarProfesor(item.id)">Eliminar</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
