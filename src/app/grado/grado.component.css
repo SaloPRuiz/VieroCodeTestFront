@@ -1,0 +1,101 @@
+/* Estilo general para el contenedor de la tabla */
+.contenedor-tabla {
+  background-color: #f4f4f4;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 20px;
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+/* Estilo del encabezado */
+h2 {
+  text-align: center;
+  font-size: 24px;
+  color: #333;
+  margin-bottom: 20px;
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+/* Estilo del botón */
+.btn-agregar {
+  background-color: #28a745;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  display: inline-block;
+  text-align: center;
+  text-decoration: none;
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+.btn-agregar:hover {
+  background-color: #218838;
+}
+
+/* Estilo de la tabla */
+.tabla-alumnos {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 0 auto;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+.tabla-alumnos th, .tabla-alumnos td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tabla-alumnos th {
+  background-color: #007bff;
+  color: white;
+}
+
+.tabla-alumnos tr:hover {
+  background-color: #f1f1f1;
+}
+
+.tabla-alumnos tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.tabla-alumnos td {
+  font-size: 14px;
+}
+
+.tabla-alumnos td:first-child {
+  text-align: center;
+}
+
+.btn-editar {
+  background-color: #28a745; /* Verde */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+.btn-eliminar {
+  background-color: #f44336; /* Rojo */
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  margin-right: 5px;
+  cursor: pointer;
+  font-family: 'Calibri', sans-serif; /* Fuente Calibri */
+}
+
+.btn-editar:hover, .btn-eliminar:hover {
+  opacity: 0.8;
+}

@@ -8,6 +8,6 @@ export const routes: Routes = [
   { path: 'alumnos', component: AlumnoComponent },
   { path: 'profesores', component: ProfesorComponent },
   { path: 'grados', component: GradoComponent },
-  { path: 'alumno-grado', component: AlumnoGradoComponent },
+  { path: 'alumno-grados', component: AlumnoGradoComponent },
   { path: '', redirectTo: '/alumnos', pathMatch: 'full' },
 ];

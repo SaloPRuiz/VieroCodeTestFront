@@ -13,7 +13,6 @@ import {MatInput} from "@angular/material/input";
 import {MatOption, MatSelect} from "@angular/material/select";
 import {MatDatepicker, MatDatepickerInput, MatDatepickerToggle} from "@angular/material/datepicker";
 import {MatButton} from "@angular/material/button";
-import {Alumno} from "../models/alumno";
 import {Profesor} from "../models/profesor";
 
 @Component({
